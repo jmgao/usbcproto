@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name PCB-USB-C)(type Legacy)(uri ${KIPRJMOD}/PCB-USB-C.lib)(options "")(descr ""))
+)

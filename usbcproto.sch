@@ -28,41 +28,33 @@ $EndComp
 $Comp
 L Device:Crystal_GND2_Small Y1
 U 1 1 5D553BD4
-P 3950 3100
-F 0 "Y1" V 4000 2650 50  0000 L CNN
-F 1 "Crystal_GND2_Small" V 3900 2000 50  0000 L CNN
-F 2 "Crystal:Resonator_SMD_muRata_CSTxExxV-3Pin_3.0x1.1mm" H 3950 3100 50  0001 C CNN
-F 3 "~" H 3950 3100 50  0001 C CNN
-	1    3950 3100
+P 3850 3100
+F 0 "Y1" V 3900 2650 50  0000 L CNN
+F 1 "Crystal_GND2_Small" V 3800 2000 50  0000 L CNN
+F 2 "Crystal:Resonator_SMD_muRata_CSTxExxV-3Pin_3.0x1.1mm" H 3850 3100 50  0001 C CNN
+F 3 "~" H 3850 3100 50  0001 C CNN
+	1    3850 3100
 	0    1    -1   0   
 $EndComp
 $Comp
 L power:GND #PWR0101
 U 1 1 5D55776E
-P 3750 3200
-F 0 "#PWR0101" H 3750 2950 50  0001 C CNN
-F 1 "GND" H 3755 3027 50  0001 C CNN
-F 2 "" H 3750 3200 50  0001 C CNN
-F 3 "" H 3750 3200 50  0001 C CNN
-	1    3750 3200
+P 3650 3200
+F 0 "#PWR0101" H 3650 2950 50  0001 C CNN
+F 1 "GND" H 3655 3027 50  0001 C CNN
+F 2 "" H 3650 3200 50  0001 C CNN
+F 3 "" H 3650 3200 50  0001 C CNN
+	1    3650 3200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3950 3200 4100 3200
+	3850 3200 4000 3200
 Wire Wire Line
-	4100 3200 4100 3150
+	4000 3000 3850 3000
 Wire Wire Line
-	4100 3150 4200 3150
+	3750 3100 3650 3100
 Wire Wire Line
-	4200 3050 4100 3050
-Wire Wire Line
-	4100 3050 4100 3000
-Wire Wire Line
-	4100 3000 3950 3000
-Wire Wire Line
-	3850 3100 3750 3100
-Wire Wire Line
-	3750 3100 3750 3200
+	3650 3100 3650 3200
 $Comp
 L PCB-USB-C:PCB-USB-C X1
 U 1 1 5D5552A5
@@ -496,14 +488,10 @@ Wire Wire Line
 	4000 1950 3900 1950
 Wire Wire Line
 	3900 1950 3900 2000
-Text GLabel 5700 2950 2    50   Input ~ 0
+Text GLabel 5800 2950 2    50   Input ~ 0
 USB_D+
-Text GLabel 5700 2850 2    50   Input ~ 0
+Text GLabel 5800 2850 2    50   Input ~ 0
 USB_D-
-Wire Wire Line
-	5700 2950 5600 2950
-Wire Wire Line
-	5700 2850 5600 2850
 Text GLabel 2050 6150 0    50   Input ~ 0
 USB_D+
 $Comp
@@ -843,4 +831,293 @@ Text GLabel 2500 6150 2    50   Input ~ 0
 VDDA
 Text Notes 2750 6200 0    50   ~ 0
 (3V3, but reusing a via)
+$Comp
+L fm-b2020rgba-hg:FM-B2020RGBA-HG D1
+U 1 1 5D5837D6
+P 6950 4600
+F 0 "D1" H 6950 5097 50  0000 C CNN
+F 1 "FM-B2020RGBA-HG" H 6950 5006 50  0000 C CNN
+F 2 "fm-b2020rgba-hg:FM-B2020RGBA-HG" H 6950 4150 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Foshan-NationStar-Optoelectronics-FM-B2020RGBA-HG_C108793.pdf" H 6950 4550 50  0001 C CNN
+	1    6950 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0123
+U 1 1 5D585FFA
+P 7250 4550
+F 0 "#PWR0123" H 7250 4400 50  0001 C CNN
+F 1 "+3V3" H 7265 4723 50  0000 C CNN
+F 2 "" H 7250 4550 50  0001 C CNN
+F 3 "" H 7250 4550 50  0001 C CNN
+	1    7250 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 4600 7150 4600
+Wire Wire Line
+	7250 4550 7250 4600
+Text Label 5600 2550 0    50   ~ 0
+PA8
+Text Label 5600 2650 0    50   ~ 0
+PA9
+Text Label 5600 2750 0    50   ~ 0
+PA10
+Text Label 6750 4400 2    50   ~ 0
+PA8
+Text Label 6750 4600 2    50   ~ 0
+PA9
+Text Label 6750 4800 2    50   ~ 0
+PA10
+$Comp
+L Connector:Conn_01x04_Male J1
+U 1 1 5D598918
+P 6700 5450
+F 0 "J1" H 6808 5731 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 6808 5640 50  0000 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical" H 6700 5450 50  0001 C CNN
+F 3 "~" H 6700 5450 50  0001 C CNN
+	1    6700 5450
+	1    0    0    -1  
+$EndComp
+Text GLabel 5800 3050 2    50   Input ~ 0
+SWDIO
+Text GLabel 5800 3150 2    50   Input ~ 0
+SWCLK
+Text GLabel 6900 5350 2    50   Input ~ 0
+SWDIO
+Text GLabel 6900 5550 2    50   Input ~ 0
+SWCLK
+$Comp
+L power:GND #PWR0125
+U 1 1 5D5AB80D
+P 7500 5500
+F 0 "#PWR0125" H 7500 5250 50  0001 C CNN
+F 1 "GND" H 7505 5327 50  0000 C CNN
+F 2 "" H 7500 5500 50  0001 C CNN
+F 3 "" H 7500 5500 50  0001 C CNN
+	1    7500 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0127
+U 1 1 5D5AC2C1
+P 7150 5850
+F 0 "#PWR0127" H 7150 5700 50  0001 C CNN
+F 1 "+3V3" H 7165 6023 50  0000 C CNN
+F 2 "" H 7150 5850 50  0001 C CNN
+F 3 "" H 7150 5850 50  0001 C CNN
+	1    7150 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 5450 7500 5500
+Wire Wire Line
+	6900 5450 7500 5450
+Wire Wire Line
+	6900 5650 6900 5850
+Wire Wire Line
+	6900 5850 7150 5850
+Text Label 5600 3450 0    50   ~ 0
+PB0
+Text Label 5600 3550 0    50   ~ 0
+PB1
+Text Label 5600 3650 0    50   ~ 0
+PB2
+Text Label 5600 3750 0    50   ~ 0
+PB3
+Text Label 5600 3850 0    50   ~ 0
+PB4
+Text Label 5600 3950 0    50   ~ 0
+PB5
+Text Label 5600 4050 0    50   ~ 0
+PB6
+Text Label 5600 4150 0    50   ~ 0
+PB7
+Text Label 5600 4250 0    50   ~ 0
+PB8
+Text Label 5600 4350 0    50   ~ 0
+PB9
+Text Label 5600 4450 0    50   ~ 0
+PB10
+Text Label 5600 4550 0    50   ~ 0
+PB11
+Text Label 5600 4650 0    50   ~ 0
+PB12
+Text Label 5600 4750 0    50   ~ 0
+PB13
+Text Label 5600 4850 0    50   ~ 0
+PB14
+Text Label 5600 4950 0    50   ~ 0
+PB15
+Text Label 5600 1750 0    50   ~ 0
+PA0
+Text Label 5600 1850 0    50   ~ 0
+PA1
+Text Label 5600 1950 0    50   ~ 0
+PA2
+Text Label 5600 2050 0    50   ~ 0
+PA3
+Text Label 5600 2150 0    50   ~ 0
+PA4
+Text Label 5600 2250 0    50   ~ 0
+PA5
+Text Label 5600 2350 0    50   ~ 0
+PA6
+Text Label 5600 2450 0    50   ~ 0
+PA7
+Text Label 4200 3450 2    50   ~ 0
+PC0
+Text Label 4200 3550 2    50   ~ 0
+PC1
+Text Label 4200 3650 2    50   ~ 0
+PC2
+Text Label 4200 3750 2    50   ~ 0
+PC3
+Text Label 4200 3850 2    50   ~ 0
+PC4
+Text Label 4200 3950 2    50   ~ 0
+PC5
+Text Label 4200 4050 2    50   ~ 0
+PC6
+Text Label 4200 4150 2    50   ~ 0
+PC7
+Text Label 4200 4250 2    50   ~ 0
+PC8
+Text Label 4200 4350 2    50   ~ 0
+PC9
+Text Label 4200 4450 2    50   ~ 0
+PC10
+Text Label 4200 4550 2    50   ~ 0
+PC11
+Text Label 4200 4650 2    50   ~ 0
+PC12
+Text Label 4200 4750 2    50   ~ 0
+PC13
+Text Label 4200 4850 2    50   ~ 0
+PC14
+Text Label 4200 4950 2    50   ~ 0
+PC15
+Text Label 5600 3250 0    50   ~ 0
+PA15
+Text Label 4200 3250 2    50   ~ 0
+PD2
+Wire Wire Line
+	4200 3050 4000 3050
+Wire Wire Line
+	4000 3050 4000 3000
+Wire Wire Line
+	4000 3150 4000 3200
+Wire Wire Line
+	4000 3150 4200 3150
+Wire Wire Line
+	5800 2850 5600 2850
+Wire Wire Line
+	5600 2950 5800 2950
+Wire Wire Line
+	5800 3050 5600 3050
+Wire Wire Line
+	5600 3150 5800 3150
+$Comp
+L Connector:Conn_01x20_Male J2
+U 1 1 5D614640
+P 9250 4050
+F 0 "J2" H 9350 5200 50  0000 C CNN
+F 1 "Conn_01x20_Male" H 9350 5100 50  0000 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x20_P1.27mm_Vertical" H 9250 4050 50  0001 C CNN
+F 3 "~" H 9250 4050 50  0001 C CNN
+	1    9250 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x20_Male J3
+U 1 1 5D61D719
+P 10350 4050
+F 0 "J3" H 10450 5200 50  0000 C CNN
+F 1 "Conn_01x20_Male" H 10450 5100 50  0000 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x20_P1.27mm_Vertical" H 10350 4050 50  0001 C CNN
+F 3 "~" H 10350 4050 50  0001 C CNN
+	1    10350 4050
+	-1   0    0    -1  
+$EndComp
+Text Label 9450 3150 0    50   ~ 0
+PA3
+Text Label 9450 3250 0    50   ~ 0
+PA4
+Text Label 9450 3350 0    50   ~ 0
+PA5
+Text Label 9450 3450 0    50   ~ 0
+PA6
+Text Label 9450 3550 0    50   ~ 0
+PA7
+Text Label 9450 3650 0    50   ~ 0
+PC4
+Text Label 9450 3750 0    50   ~ 0
+PC5
+Text Label 9450 3850 0    50   ~ 0
+PB0
+Text Label 9450 3950 0    50   ~ 0
+PB1
+Text Label 9450 4050 0    50   ~ 0
+PB2
+Text Label 9450 4150 0    50   ~ 0
+PB10
+Text Label 9450 4250 0    50   ~ 0
+PB11
+Text Label 9450 4350 0    50   ~ 0
+PB12
+Text Label 9450 4450 0    50   ~ 0
+PB13
+Text Label 9450 4550 0    50   ~ 0
+PB14
+Text Label 9450 4650 0    50   ~ 0
+PB15
+Text Label 9450 4750 0    50   ~ 0
+PC6
+Text Label 9450 4850 0    50   ~ 0
+PC7
+Text Label 9450 4950 0    50   ~ 0
+PC8
+Text Label 9450 5050 0    50   ~ 0
+PC9
+Text Label 10150 3150 2    50   ~ 0
+PA2
+Text Label 10150 3250 2    50   ~ 0
+PA1
+Text Label 10150 3350 2    50   ~ 0
+PA0
+Text Label 10150 3450 2    50   ~ 0
+PC3
+Text Label 10150 3550 2    50   ~ 0
+PC2
+Text Label 10150 3650 2    50   ~ 0
+PC1
+Text Label 10150 3750 2    50   ~ 0
+PC0
+Text Label 10150 3850 2    50   ~ 0
+PC15
+Text Label 10150 3950 2    50   ~ 0
+PC14
+Text Label 10150 4050 2    50   ~ 0
+PC13
+Text Label 10150 4150 2    50   ~ 0
+PB9
+Text Label 10150 4250 2    50   ~ 0
+PB8
+Text Label 10150 4350 2    50   ~ 0
+PB7
+Text Label 10150 4450 2    50   ~ 0
+PB6
+Text Label 10150 4550 2    50   ~ 0
+PB5
+Text Label 10150 4650 2    50   ~ 0
+PB4
+Text Label 10150 4750 2    50   ~ 0
+PB3
+Text Label 10150 4850 2    50   ~ 0
+PD2
+Text Label 10150 4950 2    50   ~ 0
+PC12
+Text Label 10150 5050 2    50   ~ 0
+PC11
 $EndSCHEMATC
